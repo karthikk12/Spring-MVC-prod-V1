@@ -1,7 +1,12 @@
 package com.demo.DTO;
 
+import java.util.List;
+
+import javax.validation.constraints.NotBlank;
+
 public class NewUserDTO {
 
+	@NotBlank(message = " *Name should not blank")
 	private String name;
 
 	private String userName;
@@ -10,7 +15,17 @@ public class NewUserDTO {
 
 	private String country;
 
+	private List<String> hobbies;
+
 	private String gender;
+
+	public List<String> getHobbies() {
+		return hobbies;
+	}
+
+	public void setHobbies(List<String> hobbies) {
+		this.hobbies = hobbies;
+	}
 
 	public String getName() {
 		return name;

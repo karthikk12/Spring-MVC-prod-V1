@@ -1,5 +1,10 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +12,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>New User Details</h1>
-	<hr />
+	<div align="center">
 
-	<p>Name : ${newUserEntry.name}</p>
+		<h1>New User Details</h1>
+		<hr />
+
+
+		<p>Name : ${newUserEntry.name}</p>
+		<p>User Name : ${newUserEntry.userName}</p>
+		<p>Password : ${newUserEntry.password}</p>
+		<p>Country : ${newUserEntry.country}</p>
+
+		Hobbies:
+		<c:forEach var="temp" items="${newUserEntry.hobbies}">
+			<p>${temp}</p>
+
+		</c:forEach>
+
+		<p>Gender : ${newUserEntry.gender}</p>
+
+	</div>
 </body>
 </html>
