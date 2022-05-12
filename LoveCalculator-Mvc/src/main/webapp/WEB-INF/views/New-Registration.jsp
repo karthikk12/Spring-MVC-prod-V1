@@ -72,6 +72,8 @@
 			<label for="em">Email :</label>
 			<form:input path="communicationDto.email" id="em" />
 
+			<label for="ph">Phone :</label>
+			<form:input path="communicationDto.phone" id="ph" />
 
 			<br>
 			<br>

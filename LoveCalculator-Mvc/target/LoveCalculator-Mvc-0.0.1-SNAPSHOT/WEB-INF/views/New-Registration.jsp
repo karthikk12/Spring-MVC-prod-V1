@@ -4,6 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+.newUserError {
+	color: Red;
+	position: fixed;
+	text-align: left;
+	margin-left: 30px;
+}
+</style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -16,6 +24,7 @@
 
 			<label for="n"> Name :</label>
 			<form:input path="name" id="n" />
+			<form:errors path="name" cssClass="newUserError" />
 			<br>
 			<br>
 
@@ -53,8 +62,20 @@
 			Female :<form:radiobutton path="gender" value="Female" />
 			<br>
 			<br>
-			<input type="submit" value="Register">
 
+			<label for="ag">Age :</label>
+			<form:input path="age" id="ag" />
+			<br>
+			<br>
+			<hr>
+			<h2>Communication :</h2>
+			<label for="em">Email :</label>
+			<form:input path="communicationDto.email" id="em" />
+
+
+			<br>
+			<br>
+			<input type="submit" value="Register">
 		</form:form>
 
 	</div>

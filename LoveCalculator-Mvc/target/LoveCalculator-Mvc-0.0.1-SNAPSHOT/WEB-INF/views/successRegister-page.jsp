@@ -30,6 +30,9 @@
 		</c:forEach>
 
 		<p>Gender : ${newUserEntry.gender}</p>
+		<p>Age : ${newUserEntry.age}</p>
+		<p>Email : ${newUserEntry.communicationDto.email}</p>
+
 
 	</div>
 </body>

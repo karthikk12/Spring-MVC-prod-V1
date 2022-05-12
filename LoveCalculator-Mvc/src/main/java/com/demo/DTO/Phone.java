@@ -22,4 +22,10 @@ public class Phone {
 		this.numbers = numbers;
 	}
 
+	@Override
+	public String toString() {
+
+		return countryCode + "-" + numbers;
+	}
+
 }
