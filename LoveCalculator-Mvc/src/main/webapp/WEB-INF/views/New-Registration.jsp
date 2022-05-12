@@ -62,8 +62,20 @@
 			Female :<form:radiobutton path="gender" value="Female" />
 			<br>
 			<br>
-			<input type="submit" value="Register">
 
+			<label for="ag">Age :</label>
+			<form:input path="age" id="ag" />
+			<br>
+			<br>
+			<hr>
+			<h2>Communication :</h2>
+			<label for="em">Email :</label>
+			<form:input path="communicationDto.email" id="em" />
+
+
+			<br>
+			<br>
+			<input type="submit" value="Register">
 		</form:form>
 
 	</div>

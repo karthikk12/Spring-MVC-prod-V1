@@ -6,7 +6,6 @@ import javax.validation.constraints.NotBlank;
 
 public class NewUserDTO {
 
-	@NotBlank(message = " *Name should not blank")
 	private String name;
 
 	private String userName;
@@ -18,6 +17,26 @@ public class NewUserDTO {
 	private List<String> hobbies;
 
 	private String gender;
+
+	private int age;
+
+	private CommunicationDTO communicationDto;
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public CommunicationDTO getCommunicationDto() {
+		return communicationDto;
+	}
+
+	public void setCommunicationDto(CommunicationDTO communicationDto) {
+		this.communicationDto = communicationDto;
+	}
 
 	public List<String> getHobbies() {
 		return hobbies;
