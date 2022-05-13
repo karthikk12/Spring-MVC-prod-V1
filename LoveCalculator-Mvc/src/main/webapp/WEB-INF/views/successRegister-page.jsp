@@ -11,29 +11,48 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="Silver">
+	<div align="right">
+		<a href="welcomePage">Logout</a>
+	</div>
 	<div align="center">
 
-		<h1>New User Details</h1>
+
+		<h1>Your Entered Details :</h1>
 		<hr />
 
 
-		<p>Name : ${newUserEntry.name}</p>
-		<p>User Name : ${newUserEntry.userName}</p>
-		<p>Password : ${newUserEntry.password}</p>
-		<p>Country : ${newUserEntry.country}</p>
+		<p>
+			<b>Name: </b>${newUserEntry.name}</p>
+		<p>
+			<b>User Name :</b> ${newUserEntry.userName}
+		</p>
+		<p>
+			<b>Password :</b> ${newUserEntry.password}
+		</p>
+		<p>
+			<b>Country :</b> ${newUserEntry.country}
+		</p>
 
-		Hobbies:
+		<b>Hobbies:</b>
 		<c:forEach var="temp" items="${newUserEntry.hobbies}">
-			<p>${temp}</p>
+			${temp}
 
 		</c:forEach>
 
-		<p>Gender : ${newUserEntry.gender}</p>
-		<p>Age : ${newUserEntry.age}</p>
-		<p>Email : ${newUserEntry.communicationDto.email}</p>
-		<p>Phone : ${newUserEntry.communicationDto.phone}</p>
-		<p>Landline : ${newUserEntry.communicationDto.landline}</p>
+		<p>
+			<b>Gender :</b> ${newUserEntry.gender}
+		</p>
+		<p>
+			<b>Age : </b>${newUserEntry.age}</p>
+		<p>
+		<h2>Communication:</h2>
+		<hr />
+		<b>Email : </b>${newUserEntry.communicationDto.email}</p>
+		<p>
+			<b>Phone : </b>${newUserEntry.communicationDto.phone}</p>
+		<p>
+			<b>Landline : </b>${newUserEntry.communicationDto.landline}</p>
 
 
 
