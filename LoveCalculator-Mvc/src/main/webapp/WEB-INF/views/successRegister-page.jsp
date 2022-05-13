@@ -33,6 +33,8 @@
 		<p>Age : ${newUserEntry.age}</p>
 		<p>Email : ${newUserEntry.communicationDto.email}</p>
 		<p>Phone : ${newUserEntry.communicationDto.phone}</p>
+		<p>Landline : ${newUserEntry.communicationDto.landline}</p>
+
 
 
 	</div>

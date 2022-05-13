@@ -6,6 +6,16 @@ public class CommunicationDTO {
 
 	private Phone phone;
 
+	private Landline landline;
+
+	public Landline getLandline() {
+		return landline;
+	}
+
+	public void setLandline(Landline landline) {
+		this.landline = landline;
+	}
+
 	public String getEmail() {
 		return email;
 	}

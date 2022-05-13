@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.demo.formatters.LandlineFormatter;
 import com.demo.formatters.PhoneNoFormatter;
 
 @EnableWebMvc
@@ -32,5 +33,7 @@ public class LoveCalculatorConfig implements WebMvcConfigurer {
 		System.out.println("instance of phone Number formatter");
 
 		registry.addFormatter(new PhoneNoFormatter());
+
+		registry.addFormatter(new LandlineFormatter());
 	}
 }
