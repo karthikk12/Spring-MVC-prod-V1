@@ -13,7 +13,7 @@ import com.demo.formatters.PhoneNoFormatter;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "com.demo.controllers")
+@ComponentScan(basePackages = "com.demo.controllers,com.demo.Prepopulate")
 public class LoveCalculatorConfig implements WebMvcConfigurer {
 
 	@Bean

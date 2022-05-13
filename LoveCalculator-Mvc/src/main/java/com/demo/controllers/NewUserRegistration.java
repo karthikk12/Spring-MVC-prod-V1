@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.DTO.NewUserDTO;
+import com.demo.Prepopulate.PrepopulateClass;
 
 @Controller
 public class NewUserRegistration {
