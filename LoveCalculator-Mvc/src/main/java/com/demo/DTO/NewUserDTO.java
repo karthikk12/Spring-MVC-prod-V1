@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.validation.constraints.NotBlank;
 
+import com.demo.Validators.Age;
+
 public class NewUserDTO {
 
 	private String name;
@@ -18,15 +20,16 @@ public class NewUserDTO {
 
 	private String gender;
 
-	private int age;
+	@Age(lowerAge = 21, UpperAge = 45, message = "Age should be 21 to 45")
+	private Integer age;
 
 	private CommunicationDTO communicationDto;
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 

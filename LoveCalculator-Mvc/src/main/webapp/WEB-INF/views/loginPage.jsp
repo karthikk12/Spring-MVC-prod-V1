@@ -23,6 +23,7 @@
 	<div align="right">
 		<a href="newUser">Register</a>
 	</div>
+	
 	<hr />
 	<br />
 
@@ -42,8 +43,8 @@
 			<br />
 			<br />
 			<label> Terms and Condition</label>
-			<form:checkbox path="AggreementAccepted" id="ag"  />
-			<form:errors path="AggreementAccepted" cssClass="webError"/>
+			<form:checkbox path="AggreementAccepted" id="ag" />
+			<form:errors path="AggreementAccepted" cssClass="webError" />
 			<br />
 			<br />
 

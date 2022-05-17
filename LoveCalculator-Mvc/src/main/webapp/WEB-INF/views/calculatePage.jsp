@@ -6,6 +6,9 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<div align="right">
+	<a href="creditWelcomePage">Credit Card Bill</a>
+</div>
 <body bgcolor="Silver">
 	<p>User Name : ${userData.userName}</p>
 	<p>Crush Name : ${userData.crushName}</p>

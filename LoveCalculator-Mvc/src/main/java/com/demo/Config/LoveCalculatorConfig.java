@@ -8,16 +8,18 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.demo.formatters.CreditCardBalanceFromatter;
+import com.demo.formatters.CreditCardNumberFormatter;
 import com.demo.formatters.LandlineFormatter;
 import com.demo.formatters.PhoneNoFormatter;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "com.demo.controllers,com.demo.Prepopulate")
+@ComponentScan(basePackages = "com.demo.controllers,com.demo.Prepopulate,com.demo.DTO")
 public class LoveCalculatorConfig implements WebMvcConfigurer {
 
 	@Bean
-	public InternalResourceViewResolver getResolverBean() {
+	public InternalResourceViewResolver bean() {
 
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 
@@ -35,5 +37,10 @@ public class LoveCalculatorConfig implements WebMvcConfigurer {
 		registry.addFormatter(new PhoneNoFormatter());
 
 		registry.addFormatter(new LandlineFormatter());
+
+		registry.addFormatter(new CreditCardNumberFormatter());
+
+		registry.addFormatter(new CreditCardBalanceFromatter());
+
 	}
 }

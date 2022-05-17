@@ -20,7 +20,7 @@ public class NewUserRegistration {
 	@RequestMapping("/newUser")
 	public String LoveCalculatorUserPage(@ModelAttribute("newUserEntry") NewUserDTO newUser) {
 
-		//populate.prePopulate(newUser);
+		// populate.prePopulate(newUser);
 
 		return "New-Registration";
 	}
@@ -29,6 +29,8 @@ public class NewUserRegistration {
 	public String userSubmit(@Valid @ModelAttribute("newUserEntry") NewUserDTO newUser, BindingResult result) {
 
 		if (result.hasErrors()) {
+
+			System.out.println("Errors");
 
 			return "New-Registration";
 		}
