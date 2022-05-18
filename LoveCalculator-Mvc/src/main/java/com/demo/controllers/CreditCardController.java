@@ -14,6 +14,7 @@ public class CreditCardController {
 
 	@RequestMapping("/creditWelcomePage")
 	public String creditWelcomePage(@Valid @ModelAttribute("creditBundle") Payment payment, BindingResult result) {
+	
 
 		return "credit-login";
 	}

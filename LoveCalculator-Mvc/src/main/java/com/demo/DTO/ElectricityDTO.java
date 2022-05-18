@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.Date;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ElectricityDTO {
 
 	private String name;

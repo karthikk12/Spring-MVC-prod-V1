@@ -1,5 +1,8 @@
 package com.demo.DTO;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BillNumber {
 
 	private String firstFourNumbers;

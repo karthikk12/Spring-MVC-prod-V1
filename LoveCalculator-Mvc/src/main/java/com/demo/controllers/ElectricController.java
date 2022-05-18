@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.stereotype.Controller;
@@ -19,14 +20,20 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.DTO.ElectricityDTO;
+import com.demo.Prepopulate.ElectricBill;
 import com.demo.propertyEditor.NameProperty;
 
 @Controller
 public class ElectricController {
 
+	@Autowired
+	private ElectricBill bill;
+
 	@RequestMapping("/electricPayBill")
 	public String electricWelcomePage(@Valid @ModelAttribute("electricBillBinder") ElectricityDTO electricity,
 			BindingResult result) {
+				
+		bill.electricPrepopulate();
 
 		return "electricBill-login";
 	}

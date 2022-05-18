@@ -11,7 +11,10 @@ public class ElectricFormatter implements Formatter<BillNumber> {
 
 	@Override
 	public String print(BillNumber object, Locale locale) {
-		return null;
+
+		System.out.println(object);
+
+		return object.getCountryCode() + "-" + object.getFirstFourNumbers() + "-" + object.getRegionCode();
 	}
 
 	@Override

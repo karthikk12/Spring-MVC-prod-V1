@@ -1,6 +1,6 @@
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\formatters\CreditCardNumberFormatter.java
+C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\Converters\CurrencyConverter.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\DTO\NewUserDTO.java
-C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\propertiesEditor\NameProperty.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\controllers\Test.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\formatters\PhoneNoFormatter.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\controllers\LoveCalcLoginController.java
@@ -18,6 +18,7 @@ C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\dem
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\formatters\ElectricFormatter.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\Validators\AgeValidator.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\DTO\Phone.java
+C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\propertyEditor\NameProperty.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\DTO\ElectricityDTO.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\formatters\LandlineFormatter.java
 C:\Users\a853087\git\Spring-MVC-prod-V1\LoveCalculator-Mvc\src\main\java\com\demo\DTO\CreditBalance.java
