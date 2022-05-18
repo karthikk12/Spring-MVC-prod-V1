@@ -7,12 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="Silver">
-	<h1>Electricity Bill Success</h1>
-	<hr />
+	<div align="right">
+		<a href="welcomePage">Log Out</a>
+	</div>
+	<div align="center">
 
-	Bill Number : ${electricBillBinder.billNumber}
-	<br>Amount :${electricBillBinder.amount}
-	<br>Dollar Sign:${electricBillBinder.dollarSign}
-	<br>Date: ${electricBillBinder.date}
+		<h1>Electricity Bill Success</h1>
+		<h3>Welcome ${electricBillBinder.name}</h3>
+		<hr />
+
+
+		Bill Number : ${electricBillBinder.billNumber} <br> <br>
+		Amount :${electricBillBinder.amount} <br> <br>Dollar
+		Sign:${electricBillBinder.dollarSign} <br> <br>Date:
+		${electricBillBinder.date}
+
+	</div>
 </body>
 </html>

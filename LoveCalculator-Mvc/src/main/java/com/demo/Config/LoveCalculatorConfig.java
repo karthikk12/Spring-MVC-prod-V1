@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.demo.Converters.CurrencyConverter;
 import com.demo.formatters.CreditCardBalanceFromatter;
 import com.demo.formatters.CreditCardNumberFormatter;
 import com.demo.formatters.ElectricFormatter;
@@ -44,6 +45,8 @@ public class LoveCalculatorConfig implements WebMvcConfigurer {
 		registry.addFormatter(new CreditCardBalanceFromatter());
 
 		registry.addFormatter(new ElectricFormatter());
+
+		registry.addConverter(new CurrencyConverter());
 
 	}
 }
