@@ -65,6 +65,7 @@
 
 			<label for="ag">Age :</label>
 			<form:input path="age" id="ag" />
+			<form:errors path="age" cssClass="newUserError" />
 			<br>
 			<br>
 			<hr>

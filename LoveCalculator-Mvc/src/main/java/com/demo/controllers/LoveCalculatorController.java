@@ -37,7 +37,7 @@ public class LoveCalculatorController {
 			return "loginPage";
 		}
 
-		return "calculatePage";
+		return "login-successPage";
 	}
 
 }

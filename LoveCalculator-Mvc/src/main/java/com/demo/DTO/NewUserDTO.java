@@ -3,6 +3,7 @@ package com.demo.DTO;
 import java.util.List;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 import com.demo.Validators.Age;
 
@@ -10,6 +11,7 @@ public class NewUserDTO {
 
 	private String name;
 
+	@NotEmpty(message = " *userName should not blank")
 	private String userName;
 
 	private String password;

@@ -23,7 +23,10 @@
 	<div align="right">
 		<a href="newUser">Register</a>
 	</div>
-	
+	<div align="right">
+		<a href="electricPayBill">Electricity Bill</a>
+	</div>
+
 	<hr />
 	<br />
 
