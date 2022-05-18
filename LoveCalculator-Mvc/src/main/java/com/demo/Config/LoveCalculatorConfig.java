@@ -10,6 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.demo.formatters.CreditCardBalanceFromatter;
 import com.demo.formatters.CreditCardNumberFormatter;
+import com.demo.formatters.ElectricFormatter;
 import com.demo.formatters.LandlineFormatter;
 import com.demo.formatters.PhoneNoFormatter;
 
@@ -41,6 +42,8 @@ public class LoveCalculatorConfig implements WebMvcConfigurer {
 		registry.addFormatter(new CreditCardNumberFormatter());
 
 		registry.addFormatter(new CreditCardBalanceFromatter());
+
+		registry.addFormatter(new ElectricFormatter());
 
 	}
 }
