@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.demo.Converters.CurrencyConverter;
+import com.demo.Validators.UserValidator;
 import com.demo.formatters.CreditCardBalanceFromatter;
 import com.demo.formatters.CreditCardNumberFormatter;
 import com.demo.formatters.ElectricFormatter;
@@ -17,7 +18,7 @@ import com.demo.formatters.PhoneNoFormatter;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = { "com.demo.controllers", "com.demo.Prepopulate", "com.demo.DTO" })
+@ComponentScan(basePackages = { "com.demo.controllers", "com.demo.Prepopulate", "com.demo.DTO","com.demo.Validators" })
 public class LoveCalculatorConfig implements WebMvcConfigurer {
 
 	@Bean
@@ -48,5 +49,6 @@ public class LoveCalculatorConfig implements WebMvcConfigurer {
 
 		registry.addConverter(new CurrencyConverter());
 
+	
 	}
 }

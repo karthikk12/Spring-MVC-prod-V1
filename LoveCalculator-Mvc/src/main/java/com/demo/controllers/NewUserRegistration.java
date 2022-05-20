@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.DTO.NewUserDTO;
 import com.demo.Prepopulate.PrepopulateClass;
+import com.demo.Validators.UserValidator;
 
 @Controller
 public class NewUserRegistration {
@@ -55,6 +56,8 @@ public class NewUserRegistration {
 		StringTrimmerEditor editor = new StringTrimmerEditor(true);
 
 		binder.registerCustomEditor(String.class, "userName", editor);
+
+		binder.addValidators(new UserValidator());
 
 	}
 }
