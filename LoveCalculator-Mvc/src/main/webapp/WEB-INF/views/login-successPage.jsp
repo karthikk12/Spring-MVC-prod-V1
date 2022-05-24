@@ -6,17 +6,19 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<div align="right">
-	<a href="creditWelcomePage">Credit Card Bill</a>
+
+<div align="center">
+	<h1>User Welcome Page</h1>
+	<hr />
+	<body bgcolor="Silver">
+		<h3>Welcome Again ${userData.userName}.... Below are the things U
+			can do here..</h3>
+		<hr />
+		<div>
+			<a href="creditWelcomePage">Credit Card Bill</a> <br> <a
+				href="emailSend">Email Send</a>
+
+		</div>
+	</body>
 </div>
-
-<div align="right">
-	<a href="emailSend">Email Send</a>
-</div>
-
-<body bgcolor="Silver">
-	<p>User Name : ${userData.userName}</p>
-	<p>Crush Name : ${userData.crushName}</p>
-
-</body>
 </html>

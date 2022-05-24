@@ -10,6 +10,10 @@
 	<a href="creditWelcomePage">Credit Card Bill</a>
 </div>
 
+<div align="right">
+	<a href="emailSend">Email Send</a>
+</div>
+
 <body bgcolor="Silver">
 	<p>User Name : ${userData.userName}</p>
 	<p>Crush Name : ${userData.crushName}</p>

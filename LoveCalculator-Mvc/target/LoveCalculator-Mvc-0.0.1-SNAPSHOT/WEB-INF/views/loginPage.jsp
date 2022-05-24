@@ -19,13 +19,14 @@
 <body bgcolor="silver">
 
 
-	<h1 align="center">LOVE CALCULATOR</h1>
+	<h1 align="center">LC LOGIN</h1>
 	<div align="right">
 		<a href="newUser">Register</a>
 	</div>
 	<div align="right">
 		<a href="electricPayBill">Electricity Bill</a>
 	</div>
+
 
 	<hr />
 	<br />

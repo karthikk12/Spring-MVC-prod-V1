@@ -19,7 +19,7 @@
 <body bgcolor="silver">
 
 
-	<h1 align="center">LC LOGIN</h1>
+	<h1 align="center">ASSIST LOGIN</h1>
 	<div align="right">
 		<a href="newUser">Register</a>
 	</div>
@@ -41,9 +41,9 @@
 
 			<br />
 			<br />
-			<label for="cn">Crush Name :</label>
-			<form:input path="crushName" id="cn" />
-			<form:errors path="crushName" cssClass="webError" />
+			<label for="pd">Password :</label>
+			<form:password path="password" id="pd" />
+			<form:errors path="password" cssClass="webError" />
 			<br />
 			<br />
 			<label> Terms and Condition</label>

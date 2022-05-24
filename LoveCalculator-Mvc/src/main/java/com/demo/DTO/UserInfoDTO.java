@@ -10,9 +10,9 @@ public class UserInfoDTO {
 	@Size(max = 20, min = 3, message = " *Name atleast 3-20 character")
 	private String userName;
 
-	@NotBlank(message = " *CrushName should not blank")
-	@Size(max = 20, min = 3, message = " *CrushName atleast 3-20 character")
-	private String crushName;
+	@NotBlank(message = " *password should not blank")
+	@Size(max = 20, min = 3, message = " *password atleast 3-20 character")
+	private String password;
 
 	@AssertTrue(message = " *Please accept condition to access")
 	private boolean AggreementAccepted;
@@ -25,12 +25,12 @@ public class UserInfoDTO {
 		this.userName = userName;
 	}
 
-	public String getCrushName() {
-		return crushName;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setCrushName(String crushName) {
-		this.crushName = crushName;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public boolean isAggreementAccepted() {
@@ -43,7 +43,7 @@ public class UserInfoDTO {
 
 	@Override
 	public String toString() {
-		return "UserInfoDTO [usereName=" + userName + ", crushName=" + crushName + "]";
+		return "UserInfoDTO [usereName=" + userName + ", password=" + password + "]";
 	}
 
 }
