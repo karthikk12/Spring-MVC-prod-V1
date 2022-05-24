@@ -8,15 +8,18 @@
 </head>
 
 <div align="center">
-	<h1>User Welcome Page</h1>
+	<h1>Welcome ${userName}</h1>
 	<hr />
 	<body bgcolor="Silver">
-		<h3>Welcome Again ${userData.userName}.... Below are the things U
-			can do here..</h3>
-		<hr />
+		<h3>Below are the things U can Pay here..</h3>
+
 		<div>
-			<a href="creditWelcomePage">Credit Card Bill</a> <br> <a
-				href="emailSend">Email Send</a>
+
+			<h2>Pay :</h2>
+
+			<hr />
+			<a href="creditWelcomePage">Credit Card Bill</a> <br> <br>
+			<a href="emailSend">Email Send</a>
 
 		</div>
 	</body>
