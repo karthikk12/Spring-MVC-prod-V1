@@ -8,7 +8,8 @@
 </head>
 
 <div align="center">
-	<h1>Welcome ${userName}</h1>
+	<h1>Welcome ${userData.userName}</h1>
+	
 	<hr />
 	<body bgcolor="Silver">
 		<h3>Below are the things U can Pay here..</h3>

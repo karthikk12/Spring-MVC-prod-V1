@@ -8,6 +8,9 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<div align="left">
+	<h3>Hi ${userData.userName}</h3>
+</div>
 <body bgcolor="silver">
 	<div align="center">
 		<h1>Credit Card Bill Pay</h1>

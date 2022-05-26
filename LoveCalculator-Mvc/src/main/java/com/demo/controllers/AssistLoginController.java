@@ -28,7 +28,7 @@ public class AssistLoginController {
 	}
 
 	@RequestMapping("/processCalculate")
-	public String calculatePage(@Valid @ModelAttribute("userData") UserInfoDTO userDto, BindingResult result) {
+	public String calculatePage(@Valid @ModelAttribute("userData") UserInfoDTO userDto, BindingResult result,Model model) {
 
 		if (result.hasErrors()) {
 
