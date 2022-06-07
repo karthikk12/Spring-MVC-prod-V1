@@ -1,0 +1,9 @@
+com\demo\Controllers\SecurityTestController.class
+com\demo\DAO\SignUpDaoImpl.class
+com\demo\DAO\SignUpDao.class
+com\demo\Controllers\NewController.class
+com\demo\Configurations\MySecurityRegister.class
+com\demo\Configurations\MyAppConfig.class
+com\demo\Configurations\MyAppInistialiser.class
+com\demo\Dto\SignUpDto.class
+com\demo\Configurations\MySecurityEnabler.class

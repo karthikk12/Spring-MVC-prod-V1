@@ -19,7 +19,7 @@ import com.demo.formatters.PhoneNoFormatter;
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = { "com.demo.controllers", "com.demo.Prepopulate", "com.demo.DTO", "com.demo.Validators",
-		"com.demo.services" })
+		"com.demo.services","com.demo.Exceptions" })
 public class AssistConfig implements WebMvcConfigurer {
 
 	@Bean
