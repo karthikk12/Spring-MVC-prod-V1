@@ -9,7 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<a href="coderPage">Coder Page</a>
+	<br/>
+	<a href="testerPage">Tester Page</a>
 	<h1>Hello Spring Security</h1>
 
 

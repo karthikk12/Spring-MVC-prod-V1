@@ -15,7 +15,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.demo.Configurations", "com.demo.Controllers", "com.demo.DAO" })
+@ComponentScan(basePackages = { "com.demo.Configurations", "com.demo.Controllers", "com.demo.DAO", "com.demo.Service",
+		"com.demo.Exceptions" })
 public class MyAppConfig {
 
 	@Bean
@@ -33,7 +34,7 @@ public class MyAppConfig {
 	@Bean
 	public PasswordEncoder getPasswordEncoder() {
 
-		return new BCryptPasswordEncoder();
+		return NoOpPasswordEncoder.getInstance();
 
 	}
 

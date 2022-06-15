@@ -21,7 +21,6 @@ public class SignUpDaoImpl implements SignUpDao {
 
 		jdbc.update("insert into users values(?,?,?)", signDto.getUserName(), signDto.getPassword(), "1");
 		jdbc.update("insert into authorities values(?,?)", signDto.getUserName(), "USER");
-
 	}
 
 }
