@@ -88,11 +88,14 @@
 			<input type="submit" value="Save" />
 
 		</form:form>
+		<br>
+		
+		<form:form action="/Edu/educationPage">
 
-		<form:form action="/EduSection/educationPage" method="get">
 			<input type="submit" value="Next" />
 
 		</form:form>
+
 	</body>
 </div>
 </html>

@@ -9,30 +9,34 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-	<div>
+<body bgcolor="Silver">
+	<div align="center">
 		<h1>Education Details</h1>
 		<hr />
 
-		<form:form action="educationProcessPage" modelAttribute="educationdetailsBundle">
+		<form:form action="/Edu/educationSaver" modelAttribute="educationdetailsBundle">
 		<label for="ssl">SSLC School :</label>
-		<form:input path="sslcSchool" id="ssl"/> <form:input path="sslcMark" id="sslMk"/>
+		<form:input path="sslcSchool" id="ssl"/> Marks :  <form:input path="sslcMark"/>
 		<br>
 		<br>
 		
 		<label for="hscSl">HSC School :</label>
-		<form:input path="hscSchool" id="hscSl"/> Marks : <form:input path="HscMark" id="hscMk"/>
+		<form:input path="hscSchool" id="hscSl"/> Marks : <form:input path="hscMark" />
 		<br>
 		<br>
 		
 		<label for="clg">College :</label>
-		<form:input path="collgeName" id="clg"/> <form:input path="collegeMark" id="clgMk"/>
+		<form:input path="collgeName" id="clg"/> Marks :  <form:input path="collegeMark"/>
 		<br>
 		<br>
 		
-		<input type="submit" value="Submit" />
+		<input type="submit" value="Save" />
 		
+		</form:form>
+		<br>
 		
+		<form:form action="/bankDetails/bankRegister" method="get">
+		<input type="submit" value="Next"/>
 		
 		</form:form>
 	</div>

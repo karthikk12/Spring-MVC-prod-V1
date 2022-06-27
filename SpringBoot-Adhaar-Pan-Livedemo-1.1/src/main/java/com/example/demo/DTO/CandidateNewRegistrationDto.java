@@ -1,7 +1,5 @@
 package com.example.demo.DTO;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,16 +12,18 @@ import javax.validation.constraints.NotBlank;
 @Table(name = "candidatedetails")
 public class CandidateNewRegistrationDto {
 
+	// id, firstname, username, lastname, country, company, age, gender, hobbies
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	@Column(name = "firstname")
+	private String firstname;
+
 	@Column(name = "username")
 	@NotBlank(message = " * UserName should not blank")
 	private String username;
-
-	@Column(name = "firstname")
-	private String firstname;
 
 	@Column(name = "lastname")
 	private String lastname;
@@ -41,32 +41,18 @@ public class CandidateNewRegistrationDto {
 	private String gender;
 
 	@Column(name = "hobbies")
-	private List<String> hobbies;
+	private String hobbies;
 
 	public CandidateNewRegistrationDto() {
 
 	}
 
-	public CandidateNewRegistrationDto(@NotBlank(message = " * UserName should not blank") String username,
-			String firstname, String lastname, String country, String company, String age, String gender,
-			List<String> hobbies) {
-
-		this.username = username;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.country = country;
-		this.company = company;
-		this.age = age;
-		this.gender = gender;
-		this.hobbies = hobbies;
+	public int getId() {
+		return id;
 	}
 
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFirstname() {
@@ -75,6 +61,14 @@ public class CandidateNewRegistrationDto {
 
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getLastname() {
@@ -117,11 +111,11 @@ public class CandidateNewRegistrationDto {
 		this.gender = gender;
 	}
 
-	public List<String> getHobbies() {
+	public String getHobbies() {
 		return hobbies;
 	}
 
-	public void setHobbies(List<String> hobbies) {
+	public void setHobbies(String hobbies) {
 		this.hobbies = hobbies;
 	}
 

@@ -8,7 +8,7 @@ public class EducationDetailsDto {
 
 	private String hscSchool;
 
-	private String HscMark;
+	private String hscMark;
 
 	private String collgeName;
 
@@ -16,17 +16,6 @@ public class EducationDetailsDto {
 
 	public EducationDetailsDto() {
 
-	}
-
-	public EducationDetailsDto(String sslcSchool, String sslcMark, String hscSchool, String hscMark, String collgeName,
-			String collegeMark) {
-
-		this.sslcSchool = sslcSchool;
-		this.sslcMark = sslcMark;
-		this.hscSchool = hscSchool;
-		HscMark = hscMark;
-		this.collgeName = collgeName;
-		this.collegeMark = collegeMark;
 	}
 
 	public String getSslcSchool() {
@@ -54,11 +43,11 @@ public class EducationDetailsDto {
 	}
 
 	public String getHscMark() {
-		return HscMark;
+		return hscMark;
 	}
 
 	public void setHscMark(String hscMark) {
-		HscMark = hscMark;
+		this.hscMark = hscMark;
 	}
 
 	public String getCollgeName() {
@@ -80,7 +69,7 @@ public class EducationDetailsDto {
 	@Override
 	public String toString() {
 		return "EducationDetailsDto [sslcSchool=" + sslcSchool + ", sslcMark=" + sslcMark + ", hscSchool=" + hscSchool
-				+ ", HscMark=" + HscMark + ", collgeName=" + collgeName + ", collegeMark=" + collegeMark + "]";
+				+ ", hscMark=" + hscMark + ", collgeName=" + collgeName + ", collegeMark=" + collegeMark + "]";
 	}
 
 }

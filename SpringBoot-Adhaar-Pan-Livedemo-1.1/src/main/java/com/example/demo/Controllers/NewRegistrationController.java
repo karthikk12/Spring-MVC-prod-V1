@@ -1,21 +1,33 @@
 package com.example.demo.Controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.demo.DTO.CandidateNewRegistrationDto;
+import com.example.demo.Reository.NewRegisterRepository;
 
 @Controller
+@RequestMapping(path = "/user")
 @SessionAttributes("registerBundle")
 public class NewRegistrationController {
 
+	@Autowired
+	private NewRegisterRepository repo;
+
 	@RequestMapping(path = "/registerPage")
-	public String regsiterPage(@ModelAttribute("registerBundle") CandidateNewRegistrationDto candidateRegisterDto) {
+	public String regsiterPage(Model model) {
+
+		model.addAttribute("registerBundle", new CandidateNewRegistrationDto());
 
 		return "RegistrationPage";
 	}
@@ -27,7 +39,9 @@ public class NewRegistrationController {
 
 		if (result.hasErrors()) {
 
-			System.out.println(result);
+			List<ObjectError> errors = result.getAllErrors();
+
+			errors.forEach(n -> System.out.println(n));
 
 			return "RegistrationPage";
 		}
@@ -39,6 +53,8 @@ public class NewRegistrationController {
 	public String savePersonalDataSession(
 			@Valid @ModelAttribute("registerBundle") CandidateNewRegistrationDto candidateRegisterDto,
 			BindingResult result) {
+
+		repo.saveCandidateDetails(candidateRegisterDto);
 
 		return "RegistrationPage";
 

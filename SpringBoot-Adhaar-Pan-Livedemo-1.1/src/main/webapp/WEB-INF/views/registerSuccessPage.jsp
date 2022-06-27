@@ -12,24 +12,57 @@
 	<div align="center">
 		<h1>Candidate Details</h1>
 		<hr />
-<h4>
-		<br> <br> Candidate UserName : ${registerBundle.username} <br>
-		<br> Candidate FirstName : ${registerBundle.firstname} <br>
-		<br> Candidate LastName : ${registerBundle.lastname} <br> <br>
-		Candidate Country : ${registerBundle.country} <br> <br>
-		Candidate Company : ${registerBundle.company} <br> <br>
-		Candidate Hobbies :
-		
-		<c:forEach var="temp" items="${registerBundle.hobbies}">
+		<h4>
+			<br> <br> Candidate UserName : ${registerBundle.username} <br>
+			<br> Candidate FirstName : ${registerBundle.firstname} <br>
+			<br> Candidate LastName : ${registerBundle.lastname} <br> <br>
+			Candidate Country : ${registerBundle.country} <br> <br>
+			Candidate Company : ${registerBundle.company} <br> <br>
+			Candidate Hobbies :
+
+			<c:forEach var="temp" items="${registerBundle.hobbies}">
  
  ${temp},
 
 </c:forEach>
-		<br> <br> Candidate Age : ${registerBundle.age} <br> <br>
-		Candidate Gender : ${registerBundle.gender}
+			<br> <br> Candidate Age : ${registerBundle.age} <br> <br>
+			Candidate Gender : ${registerBundle.gender}
 
-</h4>
+		</h4>
 
+		<hr />
+
+		<h1>Education Details</h1>
+		<h4>
+
+
+			SSLC School Name : ${educationdetailsBundle.sslcSchool}  
+			<span style="color: blue;"> &nbsp&nbsp  Marks :</span> ${educationdetailsBundle.sslcMark}<br> <br>
+			
+			HSC School Name : ${educationdetailsBundle.hscSchool}
+			<span style="color: blue;"> &nbsp&nbsp  Marks :</span>${educationdetailsBundle.hscMark} <br> <br>
+			
+			College Name : ${educationdetailsBundle.collgeName}
+			<span style="color: blue;"> &nbsp&nbsp  Marks :</span> ${educationdetailsBundle.collegeMark}<br> <br>
+			
+
+
+
+		</h4>
+		<hr/>
+		<h1>Education Details</h1>
+		<h4>
+		
+		Bank Name : ${bankDetailsBundle.bankname}  
+			<br> <br>
+		IFSC Code : ${bankDetailsBundle.coder.firstFourAlphabets} ${bankDetailsBundle.coder.secondFourDigits}  
+			<br> <br>
+		Account Number : ${bankDetailsBundle.number.firstFourDigit}  ${bankDetailsBundle.number.secondFourDigit}
+		 ${bankDetailsBundle.number.thirdFourDigit} ${bankDetailsBundle.number.fourthFourDigit} 
+			<br> <br>
+		
+		
+		</h4>
 	</div>
 </body>
 </html>
