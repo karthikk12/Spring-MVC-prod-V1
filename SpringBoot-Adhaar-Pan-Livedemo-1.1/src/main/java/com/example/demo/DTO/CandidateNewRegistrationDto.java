@@ -15,6 +15,7 @@ public class CandidateNewRegistrationDto {
 	// id, firstname, username, lastname, country, company, age, gender, hobbies
 
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
@@ -121,9 +122,9 @@ public class CandidateNewRegistrationDto {
 
 	@Override
 	public String toString() {
-		return "CandidateNewRegistrationDto [username=" + username + ", firstname=" + firstname + ", lastname="
-				+ lastname + ", country=" + country + ", company=" + company + ", age=" + age + ", gender=" + gender
-				+ ", hobbies=" + hobbies + "]";
+		return "CandidateNewRegistrationDto [id=" + id + ", firstname=" + firstname + ", username=" + username
+				+ ", lastname=" + lastname + ", country=" + country + ", company=" + company + ", age=" + age
+				+ ", gender=" + gender + ", hobbies=" + hobbies + "]";
 	}
 
 }

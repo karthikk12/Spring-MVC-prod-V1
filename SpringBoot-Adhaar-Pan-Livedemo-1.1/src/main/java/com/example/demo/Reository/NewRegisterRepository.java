@@ -3,7 +3,6 @@ package com.example.demo.Reository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import com.example.demo.Configurations.HibernateUtils;
 import com.example.demo.DTO.CandidateNewRegistrationDto;
