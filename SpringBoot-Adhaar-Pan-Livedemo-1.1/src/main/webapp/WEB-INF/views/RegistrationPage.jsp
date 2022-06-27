@@ -23,21 +23,21 @@
 		<h1>Candidate Registration Page</h1>
 		<hr />
 		<br>
-		<form:form action="processRegister" modelAttribute="registerBundle">
+		<form:form action="saveRegistration" modelAttribute="registerBundle">
 
 			<label for="un">UserName :</label>
-			<form:input path="userName" id="un" />
-			<form:errors path="userName" cssClass="Registererror"/>
+			<form:input path="username" id="un" />
+			<form:errors path="username" cssClass="Registererror" />
 			<br>
 			<br>
 
 			<label for="fn">FirstName :</label>
-			<form:input path="firstName" id="fn" />
+			<form:input path="firstname" id="fn" />
 			<br>
 			<br>
 
 			<label for="ln">LastName :</label>
-			<form:input path="lastName" id="ln" />
+			<form:input path="lastname" id="ln" />
 			<br>
 			<br>
 
@@ -85,7 +85,12 @@
 			Female :<form:radiobutton path="gender" value="Female" id="gd" />
 			<br>
 			<br>
-			<input type="submit" value="Register" />
+			<input type="submit" value="Save" />
+
+		</form:form>
+
+		<form:form action="/EduSection/educationPage" method="get">
+			<input type="submit" value="Next" />
 
 		</form:form>
 	</body>

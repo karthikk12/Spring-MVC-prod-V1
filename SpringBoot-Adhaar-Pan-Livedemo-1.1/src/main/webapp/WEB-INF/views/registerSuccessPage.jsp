@@ -13,9 +13,9 @@
 		<h1>Candidate Details</h1>
 		<hr />
 <h4>
-		<br> <br> Candidate UserName : ${registerBundle.userName} <br>
-		<br> Candidate FirstName : ${registerBundle.firstName} <br>
-		<br> Candidate LastName : ${registerBundle.lastName} <br> <br>
+		<br> <br> Candidate UserName : ${registerBundle.username} <br>
+		<br> Candidate FirstName : ${registerBundle.firstname} <br>
+		<br> Candidate LastName : ${registerBundle.lastname} <br> <br>
 		Candidate Country : ${registerBundle.country} <br> <br>
 		Candidate Company : ${registerBundle.company} <br> <br>
 		Candidate Hobbies :
