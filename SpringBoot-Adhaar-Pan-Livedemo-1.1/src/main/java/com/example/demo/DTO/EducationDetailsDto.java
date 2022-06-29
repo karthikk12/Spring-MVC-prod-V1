@@ -20,7 +20,7 @@ public class EducationDetailsDto {
 	@Id
 	@Column(name = "educationId")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String educationId;
+	private int educationId;
 
 	@Column(name = "sslcSchool")
 	private String sslcSchool;
@@ -42,35 +42,25 @@ public class EducationDetailsDto {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "candid")
-	private CandidateNewRegistrationDto candidateDto;
-
-	public EducationDetailsDto(String sslcSchool, String sslcMark, String hscSchool, String hscMark, String collgeName,
-			String collegeMark) {
-		this.sslcSchool = sslcSchool;
-		this.sslcMark = sslcMark;
-		this.hscSchool = hscSchool;
-		this.hscMark = hscMark;
-		this.collgeName = collgeName;
-		this.collegeMark = collegeMark;
-	}
+	private CandidateNewRegistrationDto candidateDetails;
 
 	public EducationDetailsDto() {
 
 	}
 
-	public CandidateNewRegistrationDto getCandidateDto() {
-		return candidateDto;
+	public CandidateNewRegistrationDto getCandidateDetails() {
+		return candidateDetails;
 	}
 
-	public void setCandidateDto(CandidateNewRegistrationDto candidateDto) {
-		this.candidateDto = candidateDto;
+	public void setCandidateDetails(CandidateNewRegistrationDto candidateDetails) {
+		this.candidateDetails = candidateDetails;
 	}
 
-	public String getEducationId() {
+	public int getEducationId() {
 		return educationId;
 	}
 
-	public void setEducationId(String educationId) {
+	public void setEducationId(int educationId) {
 		this.educationId = educationId;
 	}
 

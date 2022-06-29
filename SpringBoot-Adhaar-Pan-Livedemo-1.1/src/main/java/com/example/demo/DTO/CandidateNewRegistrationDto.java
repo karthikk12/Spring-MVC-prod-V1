@@ -1,10 +1,13 @@
 package com.example.demo.DTO;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -15,9 +18,9 @@ public class CandidateNewRegistrationDto {
 	// id, firstname, username, lastname, country, company, age, gender, hobbies
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "candid")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int candid;
 
 	@Column(name = "firstname")
 	private String firstname;
@@ -48,12 +51,12 @@ public class CandidateNewRegistrationDto {
 
 	}
 
-	public int getId() {
-		return id;
+	public int getCandid() {
+		return candid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCandid(int candid) {
+		this.candid = candid;
 	}
 
 	public String getFirstname() {
@@ -122,7 +125,7 @@ public class CandidateNewRegistrationDto {
 
 	@Override
 	public String toString() {
-		return "CandidateNewRegistrationDto [id=" + id + ", firstname=" + firstname + ", username=" + username
+		return "CandidateNewRegistrationDto [candid=" + candid + ", firstname=" + firstname + ", username=" + username
 				+ ", lastname=" + lastname + ", country=" + country + ", company=" + company + ", age=" + age
 				+ ", gender=" + gender + ", hobbies=" + hobbies + "]";
 	}

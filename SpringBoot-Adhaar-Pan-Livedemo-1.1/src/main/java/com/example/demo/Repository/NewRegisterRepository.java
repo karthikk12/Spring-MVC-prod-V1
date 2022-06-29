@@ -44,7 +44,7 @@ public class NewRegisterRepository {
 
 		session.beginTransaction();
 
-		educationDto.setCandidateDto(candidateDetails);
+		educationDto.setCandidateDetails(candidateDetails);
 
 		session.save(educationDto);
 
