@@ -36,7 +36,7 @@ public class CandidateNewRegistrationDto {
 	private String company;
 
 	@Column(name = "age")
-	private String age;
+	private int age;
 
 	@Column(name = "gender")
 	private String gender;
@@ -96,11 +96,11 @@ public class CandidateNewRegistrationDto {
 		this.company = company;
 	}
 
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 

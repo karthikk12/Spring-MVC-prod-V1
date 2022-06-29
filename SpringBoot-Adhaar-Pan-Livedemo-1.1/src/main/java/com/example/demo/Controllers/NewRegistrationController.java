@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.demo.DTO.CandidateNewRegistrationDto;
-import com.example.demo.Reository.NewRegisterRepository;
+import com.example.demo.Repository.NewRegisterRepository;
 
 @Controller
 @RequestMapping(path = "/user")

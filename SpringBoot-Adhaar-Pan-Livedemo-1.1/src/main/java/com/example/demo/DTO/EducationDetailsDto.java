@@ -1,21 +1,77 @@
 package com.example.demo.DTO;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "educationdetails")
 public class EducationDetailsDto {
 
+	// educationId, sslcSchool, sslcMark, hscSchool, hscMark, collgeName,
+	// collegeMark, candid
+
+	@Id
+	@Column(name = "educationId")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String educationId;
+
+	@Column(name = "sslcSchool")
 	private String sslcSchool;
 
+	@Column(name = "sslcMark")
 	private String sslcMark;
 
+	@Column(name = "hscSchool")
 	private String hscSchool;
 
+	@Column(name = "hscMark")
 	private String hscMark;
 
+	@Column(name = "collgeName")
 	private String collgeName;
 
+	@Column(name = "collegeMark")
 	private String collegeMark;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "candid")
+	private CandidateNewRegistrationDto candidateDto;
+
+	public EducationDetailsDto(String sslcSchool, String sslcMark, String hscSchool, String hscMark, String collgeName,
+			String collegeMark) {
+		this.sslcSchool = sslcSchool;
+		this.sslcMark = sslcMark;
+		this.hscSchool = hscSchool;
+		this.hscMark = hscMark;
+		this.collgeName = collgeName;
+		this.collegeMark = collegeMark;
+	}
 
 	public EducationDetailsDto() {
 
+	}
+
+	public CandidateNewRegistrationDto getCandidateDto() {
+		return candidateDto;
+	}
+
+	public void setCandidateDto(CandidateNewRegistrationDto candidateDto) {
+		this.candidateDto = candidateDto;
+	}
+
+	public String getEducationId() {
+		return educationId;
+	}
+
+	public void setEducationId(String educationId) {
+		this.educationId = educationId;
 	}
 
 	public String getSslcSchool() {
@@ -68,8 +124,9 @@ public class EducationDetailsDto {
 
 	@Override
 	public String toString() {
-		return "EducationDetailsDto [sslcSchool=" + sslcSchool + ", sslcMark=" + sslcMark + ", hscSchool=" + hscSchool
-				+ ", hscMark=" + hscMark + ", collgeName=" + collgeName + ", collegeMark=" + collegeMark + "]";
+		return "EducationDetailsDto [educationId=" + educationId + ", sslcSchool=" + sslcSchool + ", sslcMark="
+				+ sslcMark + ", hscSchool=" + hscSchool + ", hscMark=" + hscMark + ", collgeName=" + collgeName
+				+ ", collegeMark=" + collegeMark + "]";
 	}
 
 }
