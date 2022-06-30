@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class AspectHelper {
+public class HibernateSessionAspectHelper {
 
 	@Before("execution(* saveCandidateDetails(..))")
 	public static void callerBeforeSession() {
