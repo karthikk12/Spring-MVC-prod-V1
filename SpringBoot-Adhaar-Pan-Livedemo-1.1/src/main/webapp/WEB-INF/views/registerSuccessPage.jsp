@@ -9,12 +9,14 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="Silver">
+
 	<div align="center">
+
+
 		<h1>Candidate Details</h1>
 		<hr />
 		<h4>
-		<br>
-			 Candidate UserName : ${registerBundle.username} <br> <br>
+			<br> Candidate UserName : ${registerBundle.username} <br> <br>
 			Candidate FirstName : ${registerBundle.firstname} <br> <br>
 			Candidate LastName : ${registerBundle.lastname} <br> <br>
 			Candidate Country : ${registerBundle.country} <br> <br>

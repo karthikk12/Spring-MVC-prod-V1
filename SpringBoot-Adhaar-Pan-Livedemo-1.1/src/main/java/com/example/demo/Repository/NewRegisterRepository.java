@@ -1,15 +1,13 @@
 package com.example.demo.Repository;
 
-import javax.validation.Valid;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-import com.example.demo.Configurations.HibernateUtils;
 import com.example.demo.DTO.CandidateNewRegistrationDto;
 import com.example.demo.DTO.EducationDetailsDto;
+import com.example.demo.Helpers.HibernateUtils;
 
 @Component
 public class NewRegisterRepository {
