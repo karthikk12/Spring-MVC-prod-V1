@@ -13,6 +13,8 @@
 
 		<h2>${exceptionBundle}</h2>
 
+		<h3>Exception Message is ::: {exp}</h3>
+
 	</div>
 </body>
 </html>

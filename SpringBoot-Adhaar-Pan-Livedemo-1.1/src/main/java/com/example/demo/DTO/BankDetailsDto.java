@@ -2,7 +2,6 @@ package com.example.demo.DTO;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,6 +34,10 @@ public class BankDetailsDto {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "candid")
 	private CandidateNewRegistrationDto candidateDetails;
+
+	public BankDetailsDto() {
+
+	}
 
 	public CandidateNewRegistrationDto getCandidateDetails() {
 		return candidateDetails;

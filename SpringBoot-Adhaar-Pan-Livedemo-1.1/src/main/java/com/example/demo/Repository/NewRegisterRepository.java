@@ -81,8 +81,6 @@ public class NewRegisterRepository {
 
 		session.beginTransaction();
 
-		session.save(bankDetails);
-
 		bankDetails.setCandidateDetails(candidateDetails);
 
 		session.save(bankDetails);
