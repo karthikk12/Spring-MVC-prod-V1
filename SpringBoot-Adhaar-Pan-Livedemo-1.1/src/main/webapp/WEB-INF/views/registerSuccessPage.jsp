@@ -19,6 +19,7 @@
 			<br> Candidate UserName : ${registerBundle.username} <br> <br>
 			Candidate FirstName : ${registerBundle.firstname} <br> <br>
 			Candidate LastName : ${registerBundle.lastname} <br> <br>
+		    Candidate Email : ${registerBundle.emailId} <br> <br>	
 			Candidate Country : ${registerBundle.country} <br> <br>
 			Candidate Company : ${registerBundle.company} <br> <br>
 			Candidate Hobbies :

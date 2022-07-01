@@ -54,8 +54,6 @@ public class NewRegistrationController {
 			@Valid @ModelAttribute("registerBundle") CandidateNewRegistrationDto candidateRegisterDto,
 			BindingResult result) {
 
-		repo.saveCandidateDetails(candidateRegisterDto);
-
 		return "RegistrationPage";
 
 	}

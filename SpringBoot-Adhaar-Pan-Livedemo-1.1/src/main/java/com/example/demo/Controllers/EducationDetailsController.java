@@ -48,12 +48,15 @@ public class EducationDetailsController {
 		}
 
 		return "EducationDetailsPage";
+
 	}
 
 	@RequestMapping(path = "/educationSaver")
 	public String savePersonalDataSession(
 			@Valid @ModelAttribute("educationdetailsBundle") EducationDetailsDto educationDto, BindingResult result,
 			@SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
+
+		repo.saveCandidateDetails(candidateDetails);
 
 		repo.saveEmployeeDetails(educationDto, candidateDetails);
 

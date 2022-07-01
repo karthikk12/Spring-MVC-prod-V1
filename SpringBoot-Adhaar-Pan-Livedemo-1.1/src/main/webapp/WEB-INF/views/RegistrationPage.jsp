@@ -40,6 +40,11 @@
 			<form:input path="lastname" id="ln" />
 			<br>
 			<br>
+			
+			<label for="ln">Email Id :</label>
+			<form:input path="emailId" id="ln" />
+			<br>
+			<br>
 
 			<label for="ct">Country :</label>
 			<form:select path="country" id="ct">

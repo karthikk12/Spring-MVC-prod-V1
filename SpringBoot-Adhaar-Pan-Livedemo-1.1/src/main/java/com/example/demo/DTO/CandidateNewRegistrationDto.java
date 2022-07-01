@@ -32,6 +32,9 @@ public class CandidateNewRegistrationDto {
 	@Column(name = "lastname")
 	private String lastname;
 
+	@Column(name = "candidate_emailid")
+	private String emailId;
+
 	@Column(name = "country")
 	private String country;
 
@@ -83,6 +86,14 @@ public class CandidateNewRegistrationDto {
 		this.lastname = lastname;
 	}
 
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
 	public String getCountry() {
 		return country;
 	}
@@ -126,8 +137,8 @@ public class CandidateNewRegistrationDto {
 	@Override
 	public String toString() {
 		return "CandidateNewRegistrationDto [candid=" + candid + ", firstname=" + firstname + ", username=" + username
-				+ ", lastname=" + lastname + ", country=" + country + ", company=" + company + ", age=" + age
-				+ ", gender=" + gender + ", hobbies=" + hobbies + "]";
+				+ ", lastname=" + lastname + ", emailId=" + emailId + ", country=" + country + ", company=" + company
+				+ ", age=" + age + ", gender=" + gender + ", hobbies=" + hobbies + "]";
 	}
 
 }

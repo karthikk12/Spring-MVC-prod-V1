@@ -3,18 +3,24 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+  security:
+    user:
+      name: karthik
+      password: karthik123
+      
 
 server:
     port: 9091    
     
 info:
- app:
+ application:
  name: User Registration Project
- description: Checck User Details
- version : 1.0.0
+ 
  
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+        
+        
