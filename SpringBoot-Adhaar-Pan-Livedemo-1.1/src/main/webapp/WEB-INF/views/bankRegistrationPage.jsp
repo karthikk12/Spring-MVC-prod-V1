@@ -8,6 +8,14 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript">
+
+ function alertSavePopUp(){
+	 
+	 alert("Data Saved Successfully..!! Please Submit");
+ }
+
+</script>
 <body bgcolor="Silver">
 	<div align="center">
 		<h1>Bank Details</h1>
@@ -15,7 +23,7 @@
 
 
 
-		<form:form action="bankDetailsProcessing"
+		<form:form action="saveBankDetails"
 			modelAttribute="bankDetailsBundle">
 			<label for="bn"> Bank Name :</label>
 			<form:input path="bankname" id="bn" />
@@ -32,10 +40,14 @@
 			<br>
 			<br>
 
-			<input type="submit" value="Submit" />
+			<input onclick="alertSavePopUp()" type="submit" value="Save" />
 
 		</form:form>
-
+		<br>
+		
+		<form action="/bankDetails/bankDetailsProcessing" method="get">
+		<input type="submit" value="Submit" />
+       </form>
 
 	</div>
 </body>

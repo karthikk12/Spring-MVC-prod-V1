@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class MyCustomException {
 
 	@ExceptionHandler(value = Exception.class)
-	public String getExceptionMethod(Model model) {
+	public String getExceptionMethod(Model model,Exception e) {
 
 		model.addAttribute("exceptionBundle", "Some Exception Happened..Please check..!!!!");
+		
+		e.printStackTrace();
 
 		return "exceptionPage";
 	}
@@ -26,10 +28,12 @@ public class MyCustomException {
 	}
 
 	@ExceptionHandler(value = HttpSessionRequiredException.class)
-	public String getSessionHandleException(Model model) {
+	public String getSessionHandleException(Model model,Exception e) {
 
 		model.addAttribute("exceptionBundle", "Http SessionRequired Exception Happened..Please check..!!!!");
 
+		e.printStackTrace();
+		
 		return "exceptionPage";
 	}
 }

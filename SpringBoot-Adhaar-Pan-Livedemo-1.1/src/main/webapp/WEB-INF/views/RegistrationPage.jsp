@@ -7,6 +7,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript">
+	function showAlertPopUp() {
+
+		alert("Data Saved Successfully..!! Proceed Next Page")
+	}
+</script>
+
 <style type="text/css">
 .Registererror {
 	color: Red;
@@ -40,7 +47,7 @@
 			<form:input path="lastname" id="ln" />
 			<br>
 			<br>
-			
+
 			<label for="ln">Email Id :</label>
 			<form:input path="emailId" id="ln" />
 			<br>
@@ -90,14 +97,14 @@
 			Female :<form:radiobutton path="gender" value="Female" id="gd" />
 			<br>
 			<br>
-			<input type="submit" value="Save" />
+			<input onclick="showAlertPopUp()" type="submit" value="Save" />
 
 		</form:form>
 		<br>
-		
+
 		<form:form action="/Edu/educationPage">
 
-			<input type="submit" value="Next" />
+			<input  type="submit" value="Next" />
 
 		</form:form>
 

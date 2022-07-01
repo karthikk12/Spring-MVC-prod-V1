@@ -1,8 +1,11 @@
 package com.example.demo.DTO;
 
+import javax.persistence.Embeddable;
+
 import org.springframework.stereotype.Component;
 
 @Component
+@Embeddable
 public class IfscCode {
 
 	private String firstFourAlphabets;

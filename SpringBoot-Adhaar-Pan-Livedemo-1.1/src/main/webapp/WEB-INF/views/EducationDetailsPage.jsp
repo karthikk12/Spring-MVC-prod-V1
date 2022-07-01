@@ -8,6 +8,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript">
+	function showAlertPopUp() {
+
+		alert("Data Saved Successfully..!! Proceed Next Page")
+	}
+</script>
+
 </head>
 <body bgcolor="Silver">
 	<div align="center">
@@ -30,7 +37,7 @@
 		<br>
 		<br>
 		
-		<input type="submit" value="Save" />
+		<input onclick="showAlertPopUp()" type="submit" value="Save" />
 		
 		</form:form>
 		<br>
