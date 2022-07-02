@@ -1,7 +1,6 @@
 package com.example.demo.Test.RestService;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.DTO.CandidateNewRegistrationDto;
+import com.example.demo.Exceptions.ResourceNotFoundException;
 
 @RestController
 @RequestMapping("/api")
@@ -32,7 +32,7 @@ public class RegistrationRestData {
 
 	@PostMapping("/addCandidate")
 	public ResponseEntity<CandidateNewRegistrationDto> saveCandidate(
-			@RequestBody CandidateNewRegistrationDto candidate) throws NoSuchElementException {
+			@RequestBody CandidateNewRegistrationDto candidate) {
 
 		return new ResponseEntity<CandidateNewRegistrationDto>(service.saveCandidate(candidate), HttpStatus.CREATED);
 	}

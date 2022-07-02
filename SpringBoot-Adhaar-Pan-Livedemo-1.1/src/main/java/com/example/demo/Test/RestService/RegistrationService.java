@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.DTO.CandidateNewRegistrationDto;
+import com.example.demo.Exceptions.ResourceNotFoundException;
 
 @Repository
 public class RegistrationService {
