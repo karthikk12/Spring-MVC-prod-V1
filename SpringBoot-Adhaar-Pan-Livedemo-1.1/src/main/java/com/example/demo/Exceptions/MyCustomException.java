@@ -1,5 +1,7 @@
 package com.example.demo.Exceptions;
 
+import java.util.NoSuchElementException;
+
 import org.hibernate.property.access.spi.PropertyAccessException;
 import org.springframework.ui.Model;
 import org.springframework.web.HttpSessionRequiredException;
@@ -33,6 +35,17 @@ public class MyCustomException {
 	public String getSessionHandleException(Model model, Exception e) {
 
 		model.addAttribute("exceptionBundle", "Http SessionRequired Exception Happened..Please check..!!!!");
+
+		model.addAttribute("exp", e.getMessage());
+		
+		e.printStackTrace();
+
+		return "exceptionPage";
+	}
+	@ExceptionHandler(value = NoSuchElementException.class)
+	public String getNoSuchElementException(Model model, Exception e) {
+
+		model.addAttribute("exceptionBundle", "No Such Element present in DB..Please check..!!!!");
 
 		model.addAttribute("exp", e.getMessage());
 		

@@ -1,6 +1,7 @@
 package com.example.demo.Test.RestService;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,30 +31,31 @@ public class RegistrationRestData {
 	}
 
 	@PostMapping("/addCandidate")
-	public CandidateNewRegistrationDto saveCandidate(@RequestBody CandidateNewRegistrationDto candidate) {
+	public ResponseEntity<CandidateNewRegistrationDto> saveCandidate(
+			@RequestBody CandidateNewRegistrationDto candidate) throws NoSuchElementException {
 
-		return service.saveCandidate(candidate);
+		return new ResponseEntity<CandidateNewRegistrationDto>(service.saveCandidate(candidate), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/findSingleCandidate/{id}")
-	public CandidateNewRegistrationDto findCandidate(@PathVariable("id") int id) {
+	public ResponseEntity<CandidateNewRegistrationDto> findCandidate(@PathVariable("id") int id) {
 
-		return service.findCandidate(id);
+		return new ResponseEntity<CandidateNewRegistrationDto>(service.findCandidate(id), HttpStatus.OK);
 
 	}
 
 	@PutMapping("/updateCandidate/{id}")
-	public CandidateNewRegistrationDto updateCandidate(@PathVariable("id") int id,
+	public ResponseEntity<CandidateNewRegistrationDto> updateCandidate(@PathVariable("id") int id,
 			@RequestBody CandidateNewRegistrationDto candidate) {
 
-		return service.updateCandidate(candidate);
+		return new ResponseEntity<CandidateNewRegistrationDto>(service.updateCandidate(candidate), HttpStatus.OK);
 
 	}
 
 	@DeleteMapping("/deleteCandidate/{id}")
-	public String deleteCandidate(@PathVariable("id") int id) {
+	public ResponseEntity<String> deleteCandidate(@PathVariable("id") int id) {
 
-		return service.deleteCandidate(id);
+		return new ResponseEntity<String>(service.deleteCandidate(id), HttpStatus.OK);
 
 	}
 
