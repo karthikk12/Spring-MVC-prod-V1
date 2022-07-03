@@ -1,20 +1,15 @@
 package com.example.demo.DTO;
 
+import com.example.demo.Validators.validEmail;
+import com.example.demo.Validators.validPassword;
+
 public class LoginPageDto {
 
-	private int loginId;
-
+	@validEmail(message = " * Email Id is not registered.Please register and try again")
 	private String loginemailId;
 
+	@validPassword(message = " * Invalid Password")
 	private String loginPassword;
-
-	public int getLoginId() {
-		return loginId;
-	}
-
-	public void setLoginId(int loginId) {
-		this.loginId = loginId;
-	}
 
 	public String getLoginemailId() {
 		return loginemailId;
@@ -34,8 +29,7 @@ public class LoginPageDto {
 
 	@Override
 	public String toString() {
-		return "LoginPageDto [loginId=" + loginId + ", loginemailId=" + loginemailId + ", loginPassword="
-				+ loginPassword + "]";
+		return "LoginPageDto [loginemailId=" + loginemailId + ", loginPassword=" + loginPassword + "]";
 	}
 
 }

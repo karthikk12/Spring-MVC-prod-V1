@@ -48,10 +48,16 @@
 			<br>
 			<br>
 
-			<label for="ln">Email Id :</label>
-			<form:input path="emailId" id="ln" />
+			<label for="em">Email Id :</label>
+			<form:input path="emailId" id="em" />
 			<br>
 			<br>
+			
+			<label for="pwd">Password :</label>
+			<form:input path="password" id="pwd" />
+			<br>
+			<br>
+			
 
 			<label for="ct">Country :</label>
 			<form:select path="country" id="ct">
