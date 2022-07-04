@@ -1,5 +1,7 @@
 package com.example.demo.Repository;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.hibernate.Session;
@@ -12,6 +14,7 @@ import com.example.demo.DTO.BankDetailsDto;
 import com.example.demo.DTO.CandidateNewRegistrationDto;
 import com.example.demo.DTO.EducationDetailsDto;
 import com.example.demo.DTO.IfscCode;
+import com.example.demo.DTO.LoginPageDto;
 import com.example.demo.Helpers.HibernateUtils;
 
 @Component
@@ -88,6 +91,50 @@ public class NewRegisterRepository {
 		System.out.println("Bank Details Saved");
 
 		session.close();
+
+	}
+
+	public String getLoggedInUserName(@SessionAttribute("loginBundle") LoginPageDto logindto) {
+
+		Session session = factory.openSession();
+
+		String userName = "";
+
+		List<CandidateNewRegistrationDto> candidates = session
+				.createQuery("from CandidateNewRegistrationDto", CandidateNewRegistrationDto.class).getResultList();
+
+		for (int i = 0; i < candidates.size(); i++) {
+
+			if (candidates.get(i).getEmailId().equalsIgnoreCase(logindto.getLoginemailId())) {
+
+				userName = candidates.get(i).getUsername();
+			}
+
+		}
+
+		session.close();
+
+		return userName;
+	}
+
+	public CandidateNewRegistrationDto getAllCandidatesPersonalInfoDate(
+			@SessionAttribute("loginBundle") LoginPageDto loginDetails) {
+
+		Session session = factory.openSession();
+
+		session.beginTransaction();
+
+		List<CandidateNewRegistrationDto> candidates = session
+				.createQuery("From CandidateNewRegistrationDto", CandidateNewRegistrationDto.class).getResultList();
+
+		for (int i = 0; i < candidates.size(); i++) {
+
+			if (candidates.get(i).getEmailId().equalsIgnoreCase(loginDetails.getLoginemailId())) {
+
+				return candidates.get(i);
+			}
+		}
+		return new CandidateNewRegistrationDto();
 
 	}
 
