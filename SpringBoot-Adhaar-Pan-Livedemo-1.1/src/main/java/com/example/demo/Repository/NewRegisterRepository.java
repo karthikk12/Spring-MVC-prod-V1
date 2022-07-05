@@ -134,6 +134,9 @@ public class NewRegisterRepository {
 				return candidates.get(i);
 			}
 		}
+
+		session.close();
+
 		return new CandidateNewRegistrationDto();
 
 	}
