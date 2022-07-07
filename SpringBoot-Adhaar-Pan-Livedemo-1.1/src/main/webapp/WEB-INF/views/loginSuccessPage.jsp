@@ -16,6 +16,13 @@
 
 			<input type="submit" value="Show Candidate Details" />
 		</form:form>
+		<br> <br>
+		
+		
+		<form:form action="/display/allCandidateDatas">
+
+			<input type="submit" value="Show All Candidates" />
+		</form:form>
 
 	</div>
 </body>

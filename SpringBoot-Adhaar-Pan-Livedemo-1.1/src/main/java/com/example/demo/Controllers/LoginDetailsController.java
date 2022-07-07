@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.example.demo.DTO.CandidateNewRegistrationDto;
 import com.example.demo.DTO.LoginPageDto;
 import com.example.demo.Repository.NewRegisterRepository;
 

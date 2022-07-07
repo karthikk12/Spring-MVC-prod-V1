@@ -141,4 +141,16 @@ public class NewRegisterRepository {
 
 	}
 
+	public List<CandidateNewRegistrationDto> getAllCandidatesEntireData() {
+
+		Session session = factory.openSession();
+
+		List<CandidateNewRegistrationDto> allCandidates = session
+				.createQuery("From CandidateNewRegistrationDto", CandidateNewRegistrationDto.class).getResultList();
+		
+		session.close();
+
+		return allCandidates;
+	}
+
 }

@@ -1,5 +1,7 @@
 package com.example.demo.Controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +30,17 @@ public class DetailsDisplayController {
 		model.addAttribute("candidatePersonalInfo", candidate);
 
 		return "candidatePersonalInfoPage";
+
+	}
+
+	@RequestMapping(path = "/allCandidateDatas")
+	public String showCandidateDetails(Model model) {
+
+		List<CandidateNewRegistrationDto> allCandidates = repo.getAllCandidatesEntireData();
+
+		model.addAttribute("candidateList", allCandidates);
+
+		return "FullCandidateDetails";
 
 	}
 
