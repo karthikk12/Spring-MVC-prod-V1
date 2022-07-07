@@ -11,7 +11,50 @@
 </head>
 <body bgcolor="Silver">
 
-	<div align="center">${candidatePersonalInfo}</div>
+	<div align="center">
+		
+		<h1> Candidate Details </h1>
+		
+		<hr/>
+		
+		<h4>
+
+		Candidate Id : ${candidatePersonalInfo.candid}
+		<br>
+		<br>
+		FirstName  :${candidatePersonalInfo.firstname}
+		<br>
+		<br>
+		User Name :${candidatePersonalInfo.username}
+		<br>
+		<br>
+		Last Name :${candidatePersonalInfo.lastname}
+		<br>
+		<br>
+		Email Id :${candidatePersonalInfo.emailId}
+		<br>
+		<br>
+		Password :${candidatePersonalInfo.password}
+		<br>
+		<br>
+		Country :${candidatePersonalInfo.country}
+		<br>
+		<br>
+		Company :${candidatePersonalInfo.company}
+		<br>
+		<br>
+		Age :${candidatePersonalInfo.age}
+		<br>
+		<br>
+		Gender :${candidatePersonalInfo.gender}
+		<br>
+		<br>
+		Hobbies :${candidatePersonalInfo.hobbies}
+		<br>
+		<br>
+		
+		</h4>
+	</div>
 
 
 </body>
