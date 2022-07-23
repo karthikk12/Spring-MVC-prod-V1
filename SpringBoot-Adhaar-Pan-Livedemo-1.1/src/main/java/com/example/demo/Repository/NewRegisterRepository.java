@@ -108,6 +108,7 @@ public class NewRegisterRepository {
 			if (candidates.get(i).getEmailId().equalsIgnoreCase(logindto.getLoginemailId())) {
 
 				userName = candidates.get(i).getUsername();
+
 			}
 
 		}
@@ -147,7 +148,7 @@ public class NewRegisterRepository {
 
 		List<CandidateNewRegistrationDto> allCandidates = session
 				.createQuery("From CandidateNewRegistrationDto", CandidateNewRegistrationDto.class).getResultList();
-		
+
 		session.close();
 
 		return allCandidates;
