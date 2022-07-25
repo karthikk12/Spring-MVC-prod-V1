@@ -34,7 +34,7 @@ public class BankDetailsController {
 		return "bankRegistrationPage";
 	}
 
-	@RequestMapping(path = "bankDetailsProcessing")
+	@RequestMapping(path = "/bankDetailsProcessing")
 	public String bankDetailsProcessing(@Valid @ModelAttribute("bankDetailsBundle") BankDetailsDto bankdetailsDto,
 			BindingResult result) {
 
@@ -47,16 +47,16 @@ public class BankDetailsController {
 			return "bankRegistrationPage";
 		}
 
-		return "registerSuccessPage";
+		return "contactInfoLoginPage";
 	}
 
 	@RequestMapping(path = "/saveBankDetails")
-	private String bankDetailsSaver( @Valid @ModelAttribute("bankDetailsBundle") BankDetailsDto bankdetailsDto,
-			@SessionAttribute("bankDetailsBundle") BankDetailsDto bankDetails,
+	private String bankDetailsSaver(@Valid @ModelAttribute("bankDetailsBundle") BankDetailsDto bankdetailsDto,
+			BindingResult result, @SessionAttribute("bankDetailsBundle") BankDetailsDto bankDetails,
 			@SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
 
 		repo.saveBankDetails(candidateDetails, bankDetails);
-		
+
 		return "bankRegistrationPage";
 
 	}

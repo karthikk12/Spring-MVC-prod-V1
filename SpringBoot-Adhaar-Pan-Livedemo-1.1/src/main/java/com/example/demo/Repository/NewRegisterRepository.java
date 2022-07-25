@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import com.example.demo.DTO.AccountNumber;
 import com.example.demo.DTO.BankDetailsDto;
 import com.example.demo.DTO.CandidateNewRegistrationDto;
+import com.example.demo.DTO.ContactDetailsDto;
 import com.example.demo.DTO.EducationDetailsDto;
 import com.example.demo.DTO.IfscCode;
 import com.example.demo.DTO.LoginPageDto;
@@ -152,6 +153,25 @@ public class NewRegisterRepository {
 		session.close();
 
 		return allCandidates;
+	}
+
+	public void saveAllContactDetails(@Valid ContactDetailsDto contactDetails,
+			CandidateNewRegistrationDto candidateDetails) {
+
+		Session session = factory.openSession();
+		
+		contactDetails.setCandidateDetails(candidateDetails);
+		
+		session.beginTransaction();
+		
+		session.save(contactDetails);
+		
+		session.getTransaction().commit();
+		
+		System.out.println("Contact Dtails Saved...........");
+		
+		session.close();
+
 	}
 
 }

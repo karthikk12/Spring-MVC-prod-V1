@@ -68,6 +68,20 @@
 
 
 		</h4>
+		
+		<hr />
+		<h1>Emergency Contact Details</h1>
+		<h4>
+
+			RelationShip : ${contactBundle.relationShip} <br> <br> Phone
+			Number : ${contactBundle.relationShip}
+			 <br> <br>
+			Parent Number : ${contactBundle.parentNumber}
+			 <br> <br>
+			Secondary Email : ${contactBundle.secondaryEmail}
+
+
+		</h4>
 	</div>
 </body>
 </html>

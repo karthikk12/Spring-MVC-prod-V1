@@ -9,22 +9,20 @@
 <title>Insert title here</title>
 </head>
 <script type="text/javascript">
+	function alertSavePopUp() {
 
- function alertSavePopUp(){
-	 
-	 alert("Data Saved Successfully..!! Please Submit");
- }
-
+		alert("Data Saved Successfully..!! Please Submit");
+	}
 </script>
 <body bgcolor="Silver">
 	<div align="center">
 		<h1>Bank Details</h1>
 		<hr />
 
-
-
-		<form:form action="saveBankDetails"
+		<form:form action="/bankDetails/saveBankDetails"
 			modelAttribute="bankDetailsBundle">
+			
+			
 			<label for="bn"> Bank Name :</label>
 			<form:input path="bankname" id="bn" />
 			<br>
@@ -44,10 +42,12 @@
 
 		</form:form>
 		<br>
-		
-		<form action="/bankDetails/bankDetailsProcessing" method="get">
-		<input type="submit" value="Submit" />
-       </form>
+
+		<form:form action="/emergency/contactPage">
+
+			<input type="submit" value="Next" />
+
+		</form:form>
 
 	</div>
 </body>
