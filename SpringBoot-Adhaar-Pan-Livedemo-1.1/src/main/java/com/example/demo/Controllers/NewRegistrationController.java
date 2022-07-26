@@ -19,7 +19,7 @@ import com.example.demo.Repository.NewRegisterRepository;
 
 @Controller
 @RequestMapping(path = "/user")
-@SessionAttributes({"registerBundle","candidatePersonalApiInfo"})
+@SessionAttributes({ "registerBundle", "candidatePersonalApiInfo" })
 public class NewRegistrationController {
 
 	@Autowired
@@ -48,15 +48,6 @@ public class NewRegistrationController {
 		}
 
 		return "registerSuccessPage";
-	}
-
-	@RequestMapping(path = "/saveRegistration")
-	public String savePersonalDataSession(
-			@Valid @ModelAttribute("registerBundle") CandidateNewRegistrationDto candidateRegisterDto,
-			BindingResult result) {
-
-		return "RegistrationPage";
-
 	}
 
 	@RequestMapping(path = "/PersonalApiInfo/{id}")

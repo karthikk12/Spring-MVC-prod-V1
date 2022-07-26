@@ -21,7 +21,7 @@ import com.example.demo.Repository.NewRegisterRepository;
 
 @Controller
 @RequestMapping(path = "/Edu")
-@SessionAttributes({"educationdetailsBundle","specificEducationDetails"})
+@SessionAttributes({ "educationdetailsBundle", "specificEducationDetails" })
 public class EducationDetailsController {
 
 	@Autowired
@@ -51,7 +51,7 @@ public class EducationDetailsController {
 		return "EducationDetailsPage";
 
 	}
-	
+
 	@RequestMapping(path = "/educationApiInfo/{id}")
 	public String getBankEducationDetails(@PathVariable("id") int candidid, Model model) {
 
@@ -64,11 +64,10 @@ public class EducationDetailsController {
 	}
 
 	@RequestMapping(path = "/educationSaver")
-	public String savePersonalDataSession(
-			@Valid @ModelAttribute("educationdetailsBundle") EducationDetailsDto educationDto, BindingResult result,
+	public String savePersonalDataSession(@ModelAttribute("educationdetailsBundle") EducationDetailsDto educationDto,
 			@SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
 
-		repo.saveCandidateDetails(candidateDetails);
+		//repo.saveCandidateDetails(candidateDetails);
 
 		repo.saveEmployeeDetails(educationDto, candidateDetails);
 

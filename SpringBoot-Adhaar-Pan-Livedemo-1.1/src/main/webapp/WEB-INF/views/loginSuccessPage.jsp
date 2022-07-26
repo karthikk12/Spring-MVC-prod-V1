@@ -9,6 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="Silver">
+
+	<div align="right">
+
+		<span style="color: red;"> <a href="/initialise/loginPage">
+				Logout </span></a>
+	</div>
 	<div align="center">
 		<h1>Hi ${candidateName} Login Success !!</h1>
 

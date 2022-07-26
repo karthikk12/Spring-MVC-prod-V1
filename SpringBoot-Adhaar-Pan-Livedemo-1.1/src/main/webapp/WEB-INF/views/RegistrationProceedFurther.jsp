@@ -14,14 +14,6 @@
 	}
 </script>
 
-<style type="text/css">
-.Registererror {
-	color: Red;
-	position: fixed;
-	text-align: left;
-	margin-left: 30px;
-}
-</style>
 </head>
 
 <div align="center">
@@ -34,7 +26,7 @@
 
 			<label for="un">UserName :</label>
 			<form:input path="username" id="un" />
-			<form:errors path="username" cssClass="Registererror" />
+
 			<br>
 			<br>
 
@@ -50,7 +42,7 @@
 
 			<label for="em">Email Id :</label>
 			<form:input path="emailId" id="em" />
-			<form:errors path="emailId" cssClass="Registererror" />
+
 			<br>
 			<br>
 
@@ -109,6 +101,11 @@
 		</form:form>
 		<br>
 
+		<form:form action="/Edu/educationPage">
+
+			<input type="submit" value="Next" />
+
+		</form:form>
 
 	</body>
 </div>

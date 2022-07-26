@@ -37,24 +37,14 @@ public class ContactController {
 	}
 
 	@RequestMapping(path = "/contactPageProcessing")
-	public String processContactDetailsPage(@Valid @ModelAttribute("contactBundle") ContactDetailsDto contacts,
-			BindingResult result) {
-
-		if (result.hasErrors()) {
-
-			List<ObjectError> errors = result.getAllErrors();
-
-			errors.forEach(err -> System.out.println(err));
-
-			return "contactInfoLoginPage";
-		}
+	public String processContactDetailsPage(@ModelAttribute("contactBundle") ContactDetailsDto contacts) {
 
 		return "registerSuccessPage";
 	}
 
 	@RequestMapping(path = "/SaveContactDetails")
-	public String saveContactDetails(@Valid @ModelAttribute("contactBundle") ContactDetailsDto contactDetails,
-			BindingResult result, @SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
+	public String saveContactDetails(@ModelAttribute("contactBundle") ContactDetailsDto contactDetails,
+			@SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
 
 		repo.saveAllContactDetails(contactDetails, candidateDetails);
 

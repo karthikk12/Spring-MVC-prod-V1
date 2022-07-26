@@ -47,25 +47,6 @@ public class NewRegisterRepository {
 
 	}
 
-	public void saveEmployeeDetails(EducationDetailsDto educationDto,
-			@SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
-
-		Session session = factory.openSession();
-
-		session.beginTransaction();
-
-		educationDto.setCandidateDetails(candidateDetails);
-
-		session.save(educationDto);
-
-		session.getTransaction().commit();
-
-		System.out.println("education Details Updated");
-
-		session.close();
-
-	}
-
 	public void saveBankDetails(@Valid CandidateNewRegistrationDto candidateDetails, BankDetailsDto bankDetails) {
 
 		IfscCode coder = bankDetails.getCoder();
@@ -158,20 +139,39 @@ public class NewRegisterRepository {
 		return allCandidates;
 	}
 
-	public void saveAllContactDetails(@Valid ContactDetailsDto contactDetails,
-			CandidateNewRegistrationDto candidateDetails) {
+	public void saveAllContactDetails(ContactDetailsDto contactDetails,
+			@SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
 
 		Session session = factory.openSession();
 
-		contactDetails.setCandidateDetails(candidateDetails);
-
 		session.beginTransaction();
+
+		contactDetails.setCandidateDetails(candidateDetails);
 
 		session.save(contactDetails);
 
 		session.getTransaction().commit();
 
-		System.out.println("Contact Dtails Saved...........");
+		System.out.println("Contact Details Saved...........");
+
+		session.close();
+
+	}
+
+	public void saveEmployeeDetails(EducationDetailsDto educationDto,
+			@SessionAttribute("registerBundle") CandidateNewRegistrationDto candidateDetails) {
+
+		Session session = factory.openSession();
+
+		session.beginTransaction();
+
+		educationDto.setCandidateDetails(candidateDetails);
+
+		session.save(educationDto);
+
+		session.getTransaction().commit();
+
+		System.out.println("education Details Updated...");
 
 		session.close();
 
