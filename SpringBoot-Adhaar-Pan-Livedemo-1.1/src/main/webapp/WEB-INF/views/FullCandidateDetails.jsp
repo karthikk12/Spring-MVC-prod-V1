@@ -50,7 +50,7 @@
 					<td>${eachCandidate.age}</td>
 					<td>${eachCandidate.gender}</td>
 					<td>${eachCandidate.hobbies}</td>
-					<td><a href="/api/bankDetailsAPIInfo/${eachCandidate.candid}">Info</a></td>
+					<td><a href="/Edu/bankDetailsAPIInfo/${eachCandidate.candid}">Info</a></td>
 				</tr>
 			</c:forEach>
 
