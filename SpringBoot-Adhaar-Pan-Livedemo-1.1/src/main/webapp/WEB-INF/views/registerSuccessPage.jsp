@@ -16,7 +16,7 @@
 		<h1>Candidate Details</h1>
 		<hr />
 		<h4>
-			<br> Candidate UserName : ${registerBundle.username} <br> <br>
+			Candidate UserName : ${registerBundle.username} <br> <br>
 			Candidate FirstName : ${registerBundle.firstname} <br> <br>
 			Candidate LastName : ${registerBundle.lastname} <br> <br>
 		    Candidate Email : ${registerBundle.emailId} <br> <br>	
@@ -55,7 +55,7 @@
 
 		</h4>
 		<hr />
-		<h1>Education Details</h1>
+		<h1>Bank Details</h1>
 		<h4>
 
 			Bank Name : ${bankDetailsBundle.bankname} <br> <br> IFSC

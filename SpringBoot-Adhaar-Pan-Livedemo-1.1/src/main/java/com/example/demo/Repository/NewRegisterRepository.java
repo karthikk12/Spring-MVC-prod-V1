@@ -2,6 +2,7 @@ package com.example.demo.Repository;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.validation.Valid;
@@ -198,6 +199,25 @@ public class NewRegisterRepository {
 		session.close();
 
 		return educationPicker;
+
+	}
+
+	public CandidateNewRegistrationDto getSpecificCandidateDetailsInfo(int candidid) {
+
+		Session session = factory.openSession();
+
+		CandidateNewRegistrationDto candidate = session.get(CandidateNewRegistrationDto.class, candidid);
+
+		Optional<CandidateNewRegistrationDto> nullCheck = Optional.ofNullable(candidate);
+
+		if (nullCheck.isPresent()) {
+
+			return candidate;
+		}
+
+		session.close();
+
+		return new CandidateNewRegistrationDto();
 
 	}
 

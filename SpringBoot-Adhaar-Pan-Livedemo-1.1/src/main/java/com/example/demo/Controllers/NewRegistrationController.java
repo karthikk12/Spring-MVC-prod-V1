@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
@@ -18,7 +19,7 @@ import com.example.demo.Repository.NewRegisterRepository;
 
 @Controller
 @RequestMapping(path = "/user")
-@SessionAttributes("registerBundle")
+@SessionAttributes({"registerBundle","candidatePersonalApiInfo"})
 public class NewRegistrationController {
 
 	@Autowired
@@ -56,6 +57,16 @@ public class NewRegistrationController {
 
 		return "RegistrationPage";
 
+	}
+
+	@RequestMapping(path = "/PersonalApiInfo/{id}")
+	public String getSpecificCandidateDetailsInfo(@PathVariable("id") int candidid, Model model) {
+
+		CandidateNewRegistrationDto candidate = repo.getSpecificCandidateDetailsInfo(candidid);
+
+		model.addAttribute("candidatePersonalApiInfo", candidate);
+
+		return "specificPersonalInfo";
 	}
 
 }

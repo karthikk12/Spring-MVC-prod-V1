@@ -10,12 +10,28 @@
 </style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style type="text/css">
+
+td {
+	
+	text-align: center;
+	
+	vertical-align: middle;
+	
+}
+
+</style>
 </head>
+
+
 <body bgcolor="Silver">
 
 
 	<div align="center">
-
+	
+	<h1> Candidates Details </h1>
+<hr/>
+<br>
 		<table border="1">
 
 			<thead>
@@ -31,7 +47,10 @@
 					<th>Age</th>
 					<th>Gender</th>
 					<th>Hobbies</th>
-					<th>Details</th>
+					<th>Personal Details</th>
+					<th>Education Details</th>
+					<th>Bank Details</th>
+					
 
 				</tr>
 
@@ -50,6 +69,8 @@
 					<td>${eachCandidate.age}</td>
 					<td>${eachCandidate.gender}</td>
 					<td>${eachCandidate.hobbies}</td>
+					<td><a href="/user/PersonalApiInfo/${eachCandidate.candid}">Info</a></td>
+					<td><a href="/Edu/bankDetailsAPIInfo/${eachCandidate.candid}">Info</a></td>
 					<td><a href="/Edu/bankDetailsAPIInfo/${eachCandidate.candid}">Info</a></td>
 				</tr>
 			</c:forEach>
