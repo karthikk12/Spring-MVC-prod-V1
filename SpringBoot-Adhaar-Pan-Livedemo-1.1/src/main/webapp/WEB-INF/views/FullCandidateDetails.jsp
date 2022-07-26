@@ -7,8 +7,6 @@
 <html>
 <head>
 <style type="text/css">
-
-
 </style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -33,6 +31,7 @@
 					<th>Age</th>
 					<th>Gender</th>
 					<th>Hobbies</th>
+					<th>Details</th>
 
 				</tr>
 
@@ -51,7 +50,7 @@
 					<td>${eachCandidate.age}</td>
 					<td>${eachCandidate.gender}</td>
 					<td>${eachCandidate.hobbies}</td>
-
+					<td><a href="/api/bankDetailsAPIInfo/${eachCandidate.candid}">Info</a></td>
 				</tr>
 			</c:forEach>
 

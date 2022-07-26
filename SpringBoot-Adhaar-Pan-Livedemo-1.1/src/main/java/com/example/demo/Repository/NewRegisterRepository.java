@@ -1,6 +1,8 @@
 package com.example.demo.Repository;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -159,18 +161,43 @@ public class NewRegisterRepository {
 			CandidateNewRegistrationDto candidateDetails) {
 
 		Session session = factory.openSession();
-		
+
 		contactDetails.setCandidateDetails(candidateDetails);
-		
+
 		session.beginTransaction();
-		
+
 		session.save(contactDetails);
-		
+
 		session.getTransaction().commit();
-		
+
 		System.out.println("Contact Dtails Saved...........");
-		
+
 		session.close();
+
+	}
+
+	public EducationDetailsDto getSpecificEducationDetails(int candidid) {
+
+		Session session = factory.openSession();
+
+		EducationDetailsDto educationPicker = new EducationDetailsDto();
+
+		List<EducationDetailsDto> educationsList = session
+				.createQuery("From EducationDetailsDto", EducationDetailsDto.class).getResultList();
+
+		for (EducationDetailsDto educationDetailsDto : educationsList) {
+
+			if (educationDetailsDto.getCandidateDetails().getCandid() == candidid) {
+
+				educationPicker = educationDetailsDto;
+
+			}
+
+		}
+
+		session.close();
+
+		return educationPicker;
 
 	}
 
