@@ -22,7 +22,11 @@ td {
 
 </style>
 </head>
+<div align="right">
 
+<a href="/initialise/loginProcessing">Back</a>
+
+</div>
 
 <body bgcolor="Silver">
 
@@ -70,8 +74,8 @@ td {
 					<td>${eachCandidate.gender}</td>
 					<td>${eachCandidate.hobbies}</td>
 					<td><a href="/user/PersonalApiInfo/${eachCandidate.candid}">Info</a></td>
-					<td><a href="/Edu/bankDetailsAPIInfo/${eachCandidate.candid}">Info</a></td>
-					<td><a href="/Edu/bankDetailsAPIInfo/${eachCandidate.candid}">Info</a></td>
+					<td><a href="/Edu/educationApiInfo/${eachCandidate.candid}">Info</a></td>
+					<td><a href="/bankDetails/bankApiInfo/${eachCandidate.candid}">Info</a></td>
 				</tr>
 			</c:forEach>
 

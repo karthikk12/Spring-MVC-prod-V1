@@ -221,4 +221,28 @@ public class NewRegisterRepository {
 
 	}
 
+	public BankDetailsDto getSpecificBankDetailsInfo(int candidid) {
+
+		Session session = factory.openSession();
+
+		BankDetailsDto bankdetailsInfo = null;
+
+		List<BankDetailsDto> bankdetails = session.createQuery("FROM BankDetailsDto", BankDetailsDto.class)
+				.getResultList();
+
+		for (BankDetailsDto bankDetailsDto : bankdetails) {
+
+			if (bankDetailsDto.getCandidateDetails().getCandid() == candidid) {
+
+				bankdetailsInfo = bankDetailsDto;
+
+			}
+
+		}
+
+		session.close();
+
+		return bankdetailsInfo;
+	}
+
 }

@@ -52,7 +52,7 @@ public class EducationDetailsController {
 
 	}
 	
-	@RequestMapping(path = "/bankDetailsAPIInfo/{id}")
+	@RequestMapping(path = "/educationApiInfo/{id}")
 	public String getBankEducationDetails(@PathVariable("id") int candidid, Model model) {
 
 		EducationDetailsDto educationDetails = repo.getSpecificEducationDetails(candidid);

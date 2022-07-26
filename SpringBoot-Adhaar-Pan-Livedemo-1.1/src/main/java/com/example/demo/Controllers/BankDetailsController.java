@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -20,7 +21,7 @@ import com.example.demo.Repository.NewRegisterRepository;
 
 @Controller
 @RequestMapping("/bankDetails")
-@SessionAttributes("bankDetailsBundle")
+@SessionAttributes({ "bankDetailsBundle", "specificBankApiInfo" })
 public class BankDetailsController {
 
 	@Autowired
@@ -58,6 +59,17 @@ public class BankDetailsController {
 		repo.saveBankDetails(candidateDetails, bankDetails);
 
 		return "bankRegistrationPage";
+
+	}
+
+	@RequestMapping(path = "/bankApiInfo/{id}")
+	public String getSpecificBakDetailsInfo(@PathVariable("id") int candidid, Model model) {
+
+		BankDetailsDto bankDetails = repo.getSpecificBankDetailsInfo(candidid);
+
+		model.addAttribute("specificBankApiInfo", bankDetails);
+
+		return "specificBankDetailsInfo";
 
 	}
 
