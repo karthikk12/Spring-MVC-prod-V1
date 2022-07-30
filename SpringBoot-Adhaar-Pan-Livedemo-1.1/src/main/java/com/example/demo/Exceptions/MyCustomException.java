@@ -37,20 +37,22 @@ public class MyCustomException {
 		model.addAttribute("exceptionBundle", "Http SessionRequired Exception Happened..Please check..!!!!");
 
 		model.addAttribute("exp", e.getMessage());
-		
+
 		e.printStackTrace();
 
 		return "exceptionPage";
 	}
+
 	@ExceptionHandler(value = NoSuchElementException.class)
 	public String getNoSuchElementException(Model model, Exception e) {
 
 		model.addAttribute("exceptionBundle", "No Such Element present in DB..Please check..!!!!");
 
 		model.addAttribute("exp", e.getMessage());
-		
+
 		e.printStackTrace();
 
 		return "exceptionPage";
 	}
+
 }

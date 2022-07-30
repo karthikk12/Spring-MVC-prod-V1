@@ -1,9 +1,7 @@
 package com.example.demo.Repository;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -243,6 +241,22 @@ public class NewRegisterRepository {
 		session.close();
 
 		return bankdetailsInfo;
+	}
+
+	// API method
+	public void saveSingleCandidateUsingAPI(CandidateNewRegistrationDto candidate) {
+
+		Session session = factory.openSession();
+
+		session.beginTransaction();
+
+		session.save(candidate);
+
+		session.getTransaction().commit();
+
+		session.close();
+
+		System.out.println("Cadidate Saved Successfully...");
 	}
 
 }
