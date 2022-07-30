@@ -259,4 +259,56 @@ public class NewRegisterRepository {
 		System.out.println("Cadidate Saved Successfully...");
 	}
 
+	// Rest API call
+	public CandidateNewRegistrationDto updateSpecificCandidateUsingRest(CandidateNewRegistrationDto candidate) {
+
+		Session session = factory.openSession();
+
+		session.beginTransaction();
+
+		session.saveOrUpdate(candidate);
+
+		session.getTransaction().commit();
+
+		session.close();
+
+		return candidate;
+	}
+
+	// Rest API call
+	public void deleteSpecificCandidateUsingRest(int id) {
+
+		Session session = factory.openSession();
+
+		session.beginTransaction();
+
+		CandidateNewRegistrationDto candidate = session.get(CandidateNewRegistrationDto.class, id);
+
+		session.delete(candidate);
+
+		session.getTransaction().commit();
+
+		session.close();
+
+	}
+
+	// Rest API call
+	public CandidateNewRegistrationDto partialUpdateSpecificCandidateUsingRest(int id,
+			CandidateNewRegistrationDto candidate) {
+
+		Session session = factory.openSession();
+
+		session.beginTransaction();
+
+		CandidateNewRegistrationDto specificCandidate = session.get(CandidateNewRegistrationDto.class, id);
+
+		session.save(candidate);
+
+		session.getTransaction().commit();
+
+		session.close();
+
+		return candidate;
+	}
+
 }
