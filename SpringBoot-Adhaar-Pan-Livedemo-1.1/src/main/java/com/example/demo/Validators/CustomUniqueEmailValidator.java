@@ -31,13 +31,16 @@ public class CustomUniqueEmailValidator implements Validator {
 
 		for (CandidateNewRegistrationDto candidateNewRegistrationDto : candidates) {
 
-			if (candidateNewRegistrationDto.getEmailId().equalsIgnoreCase(userEmail)) {
+			if (candidateNewRegistrationDto.getEmailId() != null) {
 
-				errors.rejectValue("emailId", "103", "Duplicate Email id. Email id already exist");
+				if (candidateNewRegistrationDto.getEmailId().equalsIgnoreCase(userEmail)) {
 
-				break;
+					errors.rejectValue("emailId", "103", "Duplicate Email id. Email id already exist");
+
+					break;
+				}
+
 			}
-
 		}
 
 	}

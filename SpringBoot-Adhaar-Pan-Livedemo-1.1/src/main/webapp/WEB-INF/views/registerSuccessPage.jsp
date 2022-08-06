@@ -82,6 +82,20 @@
 
 
 		</h4>
+		
+		<hr />
+		<h1>Proof Details</h1>
+		<h4>
+
+			Proof Name : ${proofBundle.nameAsProof} <br> <br>
+			Aadhaar Number : ${proofBundle.aadhaarNo.firstFourDigits}
+			${proofBundle.aadhaarNo.secondFourDigits}
+			${proofBundle.aadhaarNo.thirdFourDigits}
+			 <br> <br>
+			Pan Card Number Email : ${proofBundle.pancardNo.firstAlphabeticChars}
+             ${proofBundle.pancardNo.nextHalfChars}
+
+		</h4>
 	</div>
 </body>
 </html>

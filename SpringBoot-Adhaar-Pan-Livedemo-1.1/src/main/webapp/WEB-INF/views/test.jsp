@@ -13,7 +13,7 @@ table, th, td {
 </head>
 
 <body>
-	<h1>Test success</h1>
+	<h1>------------ Test success -----------------</h1>
 
 	<h2>A basic HTML table</h2>
 

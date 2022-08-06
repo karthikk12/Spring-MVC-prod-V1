@@ -63,11 +63,10 @@
 
 		</form:form>
 
-		<br>
 
-		<form:form action="/emergency/contactPageProcessing" method="get">
+		<form:form action="/biometric/ProofsPageLogin" method="get">
 
-			<input type="submit" value="Submit" />
+			<input type="submit" value="Next" />
 
 		</form:form>
 

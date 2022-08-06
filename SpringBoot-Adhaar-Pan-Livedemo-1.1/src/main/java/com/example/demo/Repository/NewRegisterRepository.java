@@ -15,6 +15,7 @@ import com.example.demo.DTO.BankDetailsDto;
 import com.example.demo.DTO.CandidateNewRegistrationDto;
 import com.example.demo.DTO.ContactDetailsDto;
 import com.example.demo.DTO.EducationDetailsDto;
+import com.example.demo.DTO.IdentityProofDto;
 import com.example.demo.DTO.IfscCode;
 import com.example.demo.DTO.LoginPageDto;
 import com.example.demo.Helpers.HibernateUtils;
@@ -309,6 +310,24 @@ public class NewRegisterRepository {
 		session.close();
 
 		return candidate;
+	}
+
+	public void saveProofDetails(IdentityProofDto proofs, CandidateNewRegistrationDto candidate) {
+
+		Session session = factory.openSession();
+
+		session.beginTransaction();
+
+		proofs.setCandidate(candidate);
+
+		session.save(proofs);
+
+		session.getTransaction().commit();
+
+		session.close();
+
+		System.out.println("Proofs Saved Successful....");
+
 	}
 
 }
