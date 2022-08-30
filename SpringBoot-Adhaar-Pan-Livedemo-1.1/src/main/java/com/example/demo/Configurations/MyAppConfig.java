@@ -19,6 +19,7 @@ public class MyAppConfig implements WebMvcConfigurer {
 		registry.addFormatter(new IfscCodeFormatter());
 		registry.addFormatter(new AadhaarCardFormatter());
 		registry.addFormatter(new PanCardFormatter());
+		System.out.println("register End.....");
 
 	}
 
